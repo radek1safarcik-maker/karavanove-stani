@@ -10,7 +10,7 @@
       --dark: #111111;
       --green: #2f4f3a;
       --light: #f6f6f2;
-      --muted: #666;
+      --muted: #666666;
       --border: #e5e5df;
     }
 
@@ -22,7 +22,7 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--dark);
-      background: #fff;
+      background: #ffffff;
       line-height: 1.65;
     }
 
@@ -30,7 +30,7 @@
       min-height: 92vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      background: var(--light);
+      background: #ffffff;
     }
 
     .hero-text {
@@ -41,7 +41,7 @@
     }
 
     .hero-text img {
-      width: 160px;
+      width: 170px;
       margin-bottom: 35px;
     }
 
@@ -106,22 +106,34 @@
 
     .facts {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 16px;
       margin-top: 40px;
     }
 
-    .fact, .card {
+    .fact {
       border: 1px solid var(--border);
       border-radius: 22px;
       padding: 26px;
-      background: #fff;
+      background: #ffffff;
     }
 
     .fact strong {
       display: block;
       font-size: 28px;
       color: var(--green);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .equipment-section {
+      background: var(--light);
+      max-width: none;
+    }
+
+    .equipment-inner {
+      max-width: 1100px;
+      margin: auto;
     }
 
     .equipment {
@@ -131,23 +143,16 @@
     }
 
     .equipment div {
-      padding: 18px 20px;
-      background: var(--light);
-      border-radius: 16px;
-      font-weight: 600;
-    }
-
-    .price-box {
-      background: var(--green);
-      color: white;
-      border-radius: 28px;
-      padding: 42px;
-    }
-
-    .price {
-      font-size: 48px;
-      font-weight: 800;
-      margin: 0;
+      padding: 22px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      font-weight: 700;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 74px;
     }
 
     .photo img {
@@ -195,8 +200,8 @@
     }
 
     footer {
-      background: #000;
-      color: #aaa;
+      background: #000000;
+      color: #aaaaaa;
       text-align: center;
       padding: 30px 20px;
       font-size: 14px;
@@ -240,31 +245,43 @@
   </p>
 
   <div class="facts">
-    <div class="fact"><strong>2</strong> prostorná stání</div>
-    <div class="fact"><strong>40 m²</strong> každé stání</div>
-    <div class="fact"><strong>300 Kč</strong> za noc</div>
-    <div class="fact"><strong>GPS</strong> 49.925838 N<br>18.006463 E</div>
+    <div class="fact">
+      <strong>2</strong>
+      prostorná stání
+    </div>
+
+    <div class="fact">
+      <strong>40 m²</strong>
+      každé stání
+    </div>
+
+    <div class="fact">
+      <strong>300 Kč</strong>
+      za noc
+    </div>
+
+    <div class="fact">
+      <strong>Lokalita</strong>
+      Ivana Kubince 23/6, Kravaře
+      <br><br>
+      GPS: 49.925838 N<br>
+      18.006463 E
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Vybavení</h2>
-  <div class="equipment">
-    <div>Elektřina</div>
-    <div>Pitná voda</div>
-    <div>Výlevka chemického WC</div>
-    <div>Výpusť šedé vody</div>
-    <div>Ohniště a gril</div>
-    <div>Oplocený areál</div>
-    <div>Pobyt se psem povolen</div>
-  </div>
-</section>
-
-<section>
-  <h2>Cena</h2>
-  <div class="price-box">
-    <p class="price">300 Kč / noc</p>
-    <p>Cena za jedno karavanové stání.</p>
+<section class="equipment-section">
+  <div class="equipment-inner">
+    <h2>Vybavení</h2>
+    <div class="equipment">
+      <div>🔌 Elektřina</div>
+      <div>💧 Pitná voda</div>
+      <div>🚽 Výlevka chemického WC</div>
+      <div>🌊 Výpusť šedé vody</div>
+      <div>🔥 Ohniště a gril</div>
+      <div>🔒 Oplocený areál</div>
+      <div>🐕 Pobyt se psem povolen</div>
+    </div>
   </div>
 </section>
 
