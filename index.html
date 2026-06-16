@@ -1,89 +1,219 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stellplatz pána z Kravař</title>
 
   <style>
+    :root {
+      --dark: #111111;
+      --green: #2f4f3a;
+      --light: #f6f6f2;
+      --muted: #666;
+      --border: #e5e5df;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f5ef;
-      color: #1f1f1f;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: #fff;
+      line-height: 1.65;
     }
 
     header {
-      padding: 80px 20px;
-      text-align: center;
-      background: #e8e2d4;
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--light);
     }
 
-    header img {
-      max-width: 140px;
-      margin-bottom: 30px;
+    .hero-text {
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-text img {
+      width: 160px;
+      margin-bottom: 35px;
     }
 
     h1 {
-      font-size: 46px;
+      font-size: clamp(42px, 6vw, 76px);
+      line-height: 1.05;
       margin: 0;
+      letter-spacing: -2px;
     }
 
-    .subtitle {
+    .claim {
       font-size: 22px;
-      margin-top: 10px;
+      color: var(--green);
+      margin: 22px 0;
+      font-weight: 600;
+    }
+
+    .hero-image {
+      background-image: url("areal.jpg");
+      background-size: cover;
+      background-position: center;
+      min-height: 500px;
     }
 
     .button {
       display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: #1f1f1f;
+      width: fit-content;
+      margin-top: 20px;
+      padding: 15px 28px;
+      background: var(--green);
       color: white;
       text-decoration: none;
-      border-radius: 30px;
+      border-radius: 999px;
       font-weight: bold;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      font-size: 14px;
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
-      padding: 70px 20px;
+      padding: 85px 24px;
     }
 
     h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+      margin: 0 0 30px;
+      letter-spacing: -1px;
     }
 
-    .grid {
+    h3 {
+      margin-top: 0;
+      font-size: 24px;
+    }
+
+    .intro {
+      font-size: 20px;
+      max-width: 820px;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .fact, .card {
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+      background: #fff;
+    }
+
+    .fact strong {
+      display: block;
+      font-size: 28px;
+      color: var(--green);
+    }
+
+    .equipment {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      gap: 14px;
     }
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 18px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    .equipment div {
+      padding: 18px 20px;
+      background: var(--light);
+      border-radius: 16px;
+      font-weight: 600;
+    }
+
+    .price-box {
+      background: var(--green);
+      color: white;
+      border-radius: 28px;
+      padding: 42px;
     }
 
     .price {
-      font-size: 34px;
-      font-weight: bold;
+      font-size: 48px;
+      font-weight: 800;
+      margin: 0;
     }
 
-    footer {
+    .photo img {
+      width: 100%;
+      border-radius: 28px;
+      display: block;
+    }
+
+    .trips {
+      display: grid;
+      gap: 22px;
+    }
+
+    .trip {
+      border-left: 5px solid var(--green);
+      padding: 28px 30px;
+      background: var(--light);
+      border-radius: 0 22px 22px 0;
+    }
+
+    .trip p {
+      margin: 10px 0;
+    }
+
+    .trip ul {
+      margin: 12px 0 12px 20px;
+      padding: 0;
+    }
+
+    .distance {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    .contact {
+      background: var(--dark);
+      color: white;
+      max-width: none;
       text-align: center;
-      padding: 40px 20px;
-      background: #1f1f1f;
+      padding: 90px 24px;
+    }
+
+    .contact a {
       color: white;
     }
 
-    a {
-      color: inherit;
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      header {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-text {
+        padding: 42px 24px;
+      }
+
+      .hero-image {
+        min-height: 360px;
+      }
     }
   </style>
 </head>
@@ -91,94 +221,154 @@
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo Stellplatz pána z Kravař">
-  <h1>Stellplatz pána z Kravař</h1>
-  <p class="subtitle">Dvě stání. Maximum klidu.</p>
-  <a class="button" href="tel:+420792313118">Rezervovat telefonicky</a>
+  <div class="hero-text">
+    <img src="logo.png" alt="Logo Stellplatz pána z Kravař">
+    <h1>Stellplatz pána z Kravař</h1>
+    <p class="claim">Dvě stání. Maximum klidu.</p>
+    <p>Soukromé karavanové stání v oploceném areálu v klidné části Kravař.</p>
+    <a class="button" href="tel:+420792313118">Rezervovat telefonicky</a>
+  </div>
+  <div class="hero-image"></div>
 </header>
 
 <section>
-  <h2>Klidné stání pro karavanisty v Kravařích</h2>
-  <p>
-    Vítejte ve Stellplatzu pána z Kravař – klidném a bezpečném místě pro karavanisty,
-    kteří hledají pohodlné zázemí, příjemnou atmosféru a dostatek soukromí.
-  </p>
-  <p>
-    Nabízíme dvě prostorná karavanová stání o velikosti 40 m² v oploceném areálu
-    v klidné části Kravař. Díky malé kapacitě si hosté mohou užít klid,
+  <h2>Klidné a bezpečné místo pro karavanisty</h2>
+  <p class="intro">
+    Vítejte ve Stellplatzu pána z Kravař – místě pro karavanisty, kteří hledají pohodlné zázemí,
+    příjemnou atmosféru a dostatek soukromí. Díky malé kapacitě nabízí areál klid,
     bezpečí a individuální přístup.
   </p>
+
+  <div class="facts">
+    <div class="fact"><strong>2</strong> prostorná stání</div>
+    <div class="fact"><strong>40 m²</strong> každé stání</div>
+    <div class="fact"><strong>300 Kč</strong> za noc</div>
+    <div class="fact"><strong>GPS</strong> 49.925838 N<br>18.006463 E</div>
+  </div>
 </section>
 
 <section>
   <h2>Vybavení</h2>
-  <div class="grid">
-    <div class="card">🚐 2 prostorná stání</div>
-    <div class="card">🔌 Elektřina</div>
-    <div class="card">💧 Pitná voda</div>
-    <div class="card">🚽 Výlevka chemického WC</div>
-    <div class="card">🌊 Výpusť šedé vody</div>
-    <div class="card">🔥 Ohniště a gril</div>
-    <div class="card">🔒 Oplocený areál</div>
-    <div class="card">🐕 Mazlíčci povoleni</div>
+  <div class="equipment">
+    <div>Elektřina</div>
+    <div>Pitná voda</div>
+    <div>Výlevka chemického WC</div>
+    <div>Výpusť šedé vody</div>
+    <div>Ohniště a gril</div>
+    <div>Oplocený areál</div>
+    <div>Pobyt se psem povolen</div>
   </div>
 </section>
 
 <section>
   <h2>Cena</h2>
-  <div class="card">
+  <div class="price-box">
     <p class="price">300 Kč / noc</p>
     <p>Cena za jedno karavanové stání.</p>
   </div>
 </section>
 
-<section>
-  <h2>Kde nás najdete</h2>
-  <p><strong>Adresa:</strong> Ivana Kubince 23/6, Kravaře</p>
-  <p><strong>GPS:</strong> 49.925838 N, 18.006463 E</p>
-  <p><strong>Rezervace:</strong> <a href="tel:+420792313118">792 313 118</a></p>
+<section class="photo">
+  <h2>Aktuální fotografie areálu</h2>
+  <img src="areal.jpg" alt="Karavanové stání v Kravařích">
 </section>
 
 <section>
   <h2>Tipy na výlety v okolí</h2>
 
-  <div class="grid">
-    <div class="card">
+  <div class="trips">
+
+    <div class="trip">
       <h3>Zámek Kravaře</h3>
-      <p>Barokní zámek, anglický park, rybníky, procházky a kavárna v areálu.</p>
+      <p>Dominanta města Kravaře a jeden z nejkrásnějších barokních zámků v regionu.</p>
+      <p><strong>Co zde najdete:</strong></p>
+      <ul>
+        <li>zámecké expozice</li>
+        <li>krásný anglický park</li>
+        <li>rybníky a příjemné procházky</li>
+        <li>kavárnu v areálu</li>
+      </ul>
+      <p class="distance">Vzdálenost: přibližně 5 minut autem nebo 20 minut pěšky.</p>
     </div>
 
-    <div class="card">
+    <div class="trip">
       <h3>Golf Club Kravaře</h3>
-      <p>18jamkové hřiště, restaurace s terasou a příjemné okolí pro procházku.</p>
+      <p>Jedno z nejlépe hodnocených golfových hřišť v České republice.</p>
+      <p><strong>Návštěvníci zde najdou:</strong></p>
+      <ul>
+        <li>18jamkové mistrovské hřiště</li>
+        <li>restauraci s terasou</li>
+        <li>výhledy na okolní krajinu</li>
+      </ul>
+      <p>I negolfisté si mohou užít příjemnou procházku v okolí areálu.</p>
+      <p class="distance">Vzdálenost: cca 5 minut autem.</p>
     </div>
 
-    <div class="card">
+    <div class="trip">
       <h3>Opava</h3>
-      <p>Historické centrum Slezska, náměstí, radniční věž, kavárny a městské sady.</p>
+      <p>Historické centrum českého Slezska a ideální půldenní výlet.</p>
+      <p><strong>Doporučujeme navštívit:</strong></p>
+      <ul>
+        <li>Horní náměstí</li>
+        <li>radniční věž</li>
+        <li>konkatedrálu Nanebevzetí Panny Marie</li>
+        <li>městské sady</li>
+        <li>kavárny a restaurace v centru</li>
+      </ul>
+      <p class="distance">Vzdálenost: přibližně 15 minut autem.</p>
     </div>
 
-    <div class="card">
+    <div class="trip">
       <h3>Hlučínsko</h3>
-      <p>Cyklotrasy, venkovská krajina, lidová architektura a přírodní zákoutí.</p>
+      <p>Region známý svou jedinečnou historií, cyklostezkami a venkovskou krajinou.</p>
+      <p><strong>Tipy:</strong></p>
+      <ul>
+        <li>cyklotrasy mezi obcemi</li>
+        <li>lidová architektura</li>
+        <li>rybníky a přírodní zákoutí</li>
+        <li>regionální gastronomie</li>
+      </ul>
+      <p>Oblast je ideální pro nenáročné výlety na kole.</p>
     </div>
 
-    <div class="card">
+    <div class="trip">
       <h3>Štěrkovna Hlučín</h3>
-      <p>Koupání, pláže, vodní sporty, občerstvení a cyklostezky kolem jezera.</p>
+      <p>Oblíbená rekreační oblast vhodná zejména v letních měsících.</p>
+      <p><strong>Nabízí:</strong></p>
+      <ul>
+        <li>koupání</li>
+        <li>pláže</li>
+        <li>vodní sporty</li>
+        <li>občerstvení</li>
+        <li>cyklostezky kolem jezera</li>
+      </ul>
+      <p>Ideální výlet pro rodiny s dětmi.</p>
+      <p class="distance">Vzdálenost: přibližně 15 minut autem.</p>
     </div>
 
-    <div class="card">
+    <div class="trip">
       <h3>Výlet do Polska</h3>
-      <p>Racibórz, historické centrum, zámek, restaurace a cukrárny.</p>
+      <p>Díky blízkosti hranic mohou hosté během několika minut navštívit Racibórz.</p>
+      <p><strong>Za návštěvu stojí:</strong></p>
+      <ul>
+        <li>historické centrum města</li>
+        <li>zámek</li>
+        <li>polské restaurace a cukrárny</li>
+      </ul>
     </div>
+
   </div>
 </section>
 
+<section class="contact">
+  <h2>Rezervace a kontakt</h2>
+  <p><strong>Adresa:</strong> Ivana Kubince 23/6, Kravaře</p>
+  <p><strong>Telefon:</strong> <a href="tel:+420792313118">792 313 118</a></p>
+  <a class="button" href="tel:+420792313118">Rezervovat telefonicky</a>
+</section>
+
 <footer>
-  <p>Stellplatz pána z Kravař</p>
-  <p>Ivana Kubince 23/6, Kravaře</p>
-  <p>Rezervace: <a href="tel:+420792313118">792 313 118</a></p>
+  Stellplatz pána z Kravař · stellplatzkravare.cz
 </footer>
 
 </body>
