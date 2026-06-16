@@ -1,28 +1,185 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karavanové stání</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stellplatz pána z Kravař</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f5ef;
+      color: #1f1f1f;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: #e8e2d4;
+    }
+
+    header img {
+      max-width: 140px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 46px;
+      margin: 0;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      margin-top: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #1f1f1f;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    }
+
+    .price {
+      font-size: 34px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #1f1f1f;
+      color: white;
+    }
+
+    a {
+      color: inherit;
+    }
+  </style>
 </head>
+
 <body>
 
-    <h1>Karavanové stání</h1>
+<header>
+  <img src="logo.png" alt="Logo Stellplatz pána z Kravař">
+  <h1>Stellplatz pána z Kravař</h1>
+  <p class="subtitle">Dvě stání. Maximum klidu.</p>
+  <a class="button" href="tel:+420792313118">Rezervovat telefonicky</a>
+</header>
 
-    <p>Vítejte na našem soukromém místě pro karavany.</p>
+<section>
+  <h2>Klidné stání pro karavanisty v Kravařích</h2>
+  <p>
+    Vítejte ve Stellplatzu pána z Kravař – klidném a bezpečném místě pro karavanisty,
+    kteří hledají pohodlné zázemí, příjemnou atmosféru a dostatek soukromí.
+  </p>
+  <p>
+    Nabízíme dvě prostorná karavanová stání o velikosti 40 m² v oploceném areálu
+    v klidné části Kravař. Díky malé kapacitě si hosté mohou užít klid,
+    bezpečí a individuální přístup.
+  </p>
+</section>
 
-    <h2>O místě</h2>
+<section>
+  <h2>Vybavení</h2>
+  <div class="grid">
+    <div class="card">🚐 2 prostorná stání</div>
+    <div class="card">🔌 Elektřina</div>
+    <div class="card">💧 Pitná voda</div>
+    <div class="card">🚽 Výlevka chemického WC</div>
+    <div class="card">🌊 Výpusť šedé vody</div>
+    <div class="card">🔥 Ohniště a gril</div>
+    <div class="card">🔒 Oplocený areál</div>
+    <div class="card">🐕 Mazlíčci povoleni</div>
+  </div>
+</section>
 
-    <p>
-        Nabízíme klidné stání pro karavany v příjemném prostředí.
-        Pro rezervaci nás kontaktujte telefonicky.
-    </p>
+<section>
+  <h2>Cena</h2>
+  <div class="card">
+    <p class="price">300 Kč / noc</p>
+    <p>Cena za jedno karavanové stání.</p>
+  </div>
+</section>
 
-    <h2>Kontakt</h2>
+<section>
+  <h2>Kde nás najdete</h2>
+  <p><strong>Adresa:</strong> Ivana Kubince 23/6, Kravaře</p>
+  <p><strong>GPS:</strong> 49.925838 N, 18.006463 E</p>
+  <p><strong>Rezervace:</strong> <a href="tel:+420792313118">792 313 118</a></p>
+</section>
 
-    <p>
-        Telefon: +420 XXX XXX XXX
-    </p>
+<section>
+  <h2>Tipy na výlety v okolí</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Zámek Kravaře</h3>
+      <p>Barokní zámek, anglický park, rybníky, procházky a kavárna v areálu.</p>
+    </div>
+
+    <div class="card">
+      <h3>Golf Club Kravaře</h3>
+      <p>18jamkové hřiště, restaurace s terasou a příjemné okolí pro procházku.</p>
+    </div>
+
+    <div class="card">
+      <h3>Opava</h3>
+      <p>Historické centrum Slezska, náměstí, radniční věž, kavárny a městské sady.</p>
+    </div>
+
+    <div class="card">
+      <h3>Hlučínsko</h3>
+      <p>Cyklotrasy, venkovská krajina, lidová architektura a přírodní zákoutí.</p>
+    </div>
+
+    <div class="card">
+      <h3>Štěrkovna Hlučín</h3>
+      <p>Koupání, pláže, vodní sporty, občerstvení a cyklostezky kolem jezera.</p>
+    </div>
+
+    <div class="card">
+      <h3>Výlet do Polska</h3>
+      <p>Racibórz, historické centrum, zámek, restaurace a cukrárny.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Stellplatz pána z Kravař</p>
+  <p>Ivana Kubince 23/6, Kravaře</p>
+  <p>Rezervace: <a href="tel:+420792313118">792 313 118</a></p>
+</footer>
 
 </body>
 </html>
