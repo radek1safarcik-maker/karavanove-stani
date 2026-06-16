@@ -14,9 +14,7 @@
       --border: #e5e5df;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -126,6 +124,15 @@
       margin-bottom: 8px;
     }
 
+    .map-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--green);
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid var(--green);
+    }
+
     .equipment-section {
       background: var(--light);
       max-width: none;
@@ -161,6 +168,24 @@
       display: block;
     }
 
+    .map-section {
+      background: var(--light);
+      max-width: none;
+    }
+
+    .map-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .map-frame {
+      width: 100%;
+      height: 420px;
+      border: 0;
+      border-radius: 28px;
+      display: block;
+    }
+
     .trips {
       display: grid;
       gap: 22px;
@@ -173,9 +198,7 @@
       border-radius: 0 22px 22px 0;
     }
 
-    .trip p {
-      margin: 10px 0;
-    }
+    .trip p { margin: 10px 0; }
 
     .trip ul {
       margin: 12px 0 12px 20px;
@@ -195,9 +218,7 @@
       padding: 90px 24px;
     }
 
-    .contact a {
-      color: white;
-    }
+    .contact a { color: white; }
 
     footer {
       background: #000000;
@@ -208,17 +229,13 @@
     }
 
     @media (max-width: 800px) {
-      header {
-        grid-template-columns: 1fr;
-      }
+      header { grid-template-columns: 1fr; }
 
-      .hero-text {
-        padding: 42px 24px;
-      }
+      .hero-text { padding: 42px 24px; }
 
-      .hero-image {
-        min-height: 360px;
-      }
+      .hero-image { min-height: 360px; }
+
+      .map-frame { height: 340px; }
     }
   </style>
 </head>
@@ -266,6 +283,10 @@
       <br><br>
       GPS: 49.925838 N<br>
       18.006463 E
+      <br>
+      <a class="map-link" href="https://maps.google.com/?q=49.925838,18.006463" target="_blank">
+        Otevřít v Google Maps
+      </a>
     </div>
   </div>
 </section>
@@ -288,6 +309,18 @@
 <section class="photo">
   <h2>Aktuální fotografie areálu</h2>
   <img src="areal.jpg" alt="Karavanové stání v Kravařích">
+</section>
+
+<section class="map-section">
+  <div class="map-inner">
+    <h2>Kde nás najdete</h2>
+    <iframe
+      class="map-frame"
+      src="https://www.google.com/maps?q=49.925838,18.006463&hl=cs&z=16&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
 </section>
 
 <section>
