@@ -39,20 +39,20 @@
     header {
       min-height: 92vh;
       display: grid;
-      grid-template-columns: 58% 42%;
+      grid-template-columns: 60% 40%;
       background: var(--white);
     }
 
     .hero-text {
-      padding: 60px 52px 60px 70px;
+      padding: 58px 52px 58px 70px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
     .hero-text img.main-logo {
-      width: 220px;
-      margin-bottom: 42px;
+      width: 280px;
+      margin-bottom: 38px;
     }
 
     .eyebrow {
@@ -61,21 +61,21 @@
       font-size: 13px;
       font-weight: 700;
       color: var(--green);
-      margin-bottom: 18px;
+      margin-bottom: 16px;
     }
 
     h1 {
-      font-size: clamp(38px, 4.3vw, 56px);
-      line-height: 1.04;
+      font-size: clamp(42px, 4.5vw, 68px);
+      line-height: 1.03;
       margin: 0;
-      letter-spacing: -2px;
+      letter-spacing: -2.5px;
       white-space: nowrap;
     }
 
     .claim {
       font-size: 23px;
       color: var(--green);
-      margin: 24px 0;
+      margin: 22px 0;
       font-weight: 700;
     }
 
@@ -113,8 +113,8 @@
     .support {
       display: flex;
       align-items: center;
-      gap: 16px;
-      margin-top: 26px;
+      gap: 18px;
+      margin-top: 35px;
       max-width: 620px;
     }
 
@@ -126,13 +126,13 @@
 
     .support-line {
       width: 1px;
-      height: 46px;
-      background: var(--border);
+      height: 42px;
+      background: #d8d8d0;
     }
 
     .support span {
       font-size: 13px;
-      color: #444;
+      color: #555;
       line-height: 1.4;
       font-weight: 600;
       max-width: 360px;
@@ -140,7 +140,7 @@
 
     .hero-image {
       background-image:
-        linear-gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
+        linear-gradient(rgba(0,0,0,0.04), rgba(0,0,0,0.04)),
         url("areal.jpg");
       background-size: cover;
       background-position: center;
@@ -150,7 +150,7 @@
     section {
       max-width: 1120px;
       margin: auto;
-      padding: 90px 24px;
+      padding: 82px 24px;
     }
 
     .section-label {
@@ -163,9 +163,9 @@
     }
 
     h2 {
-      font-size: clamp(32px, 4vw, 52px);
+      font-size: clamp(32px, 4vw, 50px);
       line-height: 1.1;
-      margin: 0 0 28px;
+      margin: 0 0 26px;
       letter-spacing: -1.5px;
     }
 
@@ -185,15 +185,15 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-top: 46px;
+      margin-top: 42px;
     }
 
     .fact {
       border: 1px solid var(--border);
-      border-radius: 26px;
+      border-radius: 24px;
       padding: 28px;
       background: var(--white);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.04);
+      box-shadow: 0 14px 36px rgba(0,0,0,0.035);
     }
 
     .fact strong {
@@ -225,7 +225,7 @@
 
     .equipment {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
       gap: 16px;
       margin-top: 34px;
     }
@@ -240,18 +240,18 @@
       min-height: 76px;
       display: flex;
       align-items: center;
-      box-shadow: 0 14px 35px rgba(0,0,0,0.035);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.03);
     }
 
     .photo {
-      padding-bottom: 30px;
+      padding-bottom: 35px;
     }
 
     .photo-card {
-      border-radius: 34px;
+      border-radius: 30px;
       overflow: hidden;
       background: var(--cream);
-      box-shadow: 0 22px 60px rgba(0,0,0,0.08);
+      box-shadow: 0 18px 48px rgba(0,0,0,0.07);
     }
 
     .photo-card img {
@@ -260,7 +260,7 @@
     }
 
     .photo-caption {
-      padding: 22px 28px;
+      padding: 20px 26px;
       color: var(--muted);
       font-size: 15px;
     }
@@ -279,9 +279,9 @@
       width: 100%;
       height: 430px;
       border: 0;
-      border-radius: 30px;
+      border-radius: 28px;
       display: block;
-      box-shadow: 0 18px 45px rgba(0,0,0,0.08);
+      box-shadow: 0 16px 42px rgba(0,0,0,0.07);
     }
 
     .trips {
@@ -290,11 +290,11 @@
     }
 
     .trip {
-      padding: 32px;
+      padding: 30px;
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: 28px;
-      box-shadow: 0 16px 42px rgba(0,0,0,0.04);
+      border-radius: 26px;
+      box-shadow: 0 12px 34px rgba(0,0,0,0.035);
     }
 
     .trip p {
@@ -311,44 +311,12 @@
       font-weight: 800;
     }
 
-    .funding {
-      background: var(--green-soft);
-      max-width: none;
-      padding: 60px 24px;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .funding-inner {
-      max-width: 1120px;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .funding p {
-      margin: 0;
-      font-weight: 700;
-      font-size: 18px;
-    }
-
-    .funding img {
-      max-height: 90px;
-      max-width: 280px;
-      object-fit: contain;
-      background: white;
-      padding: 12px;
-      border-radius: 12px;
-    }
-
     .contact {
       background: var(--dark);
       color: white;
       max-width: none;
       text-align: center;
-      padding: 95px 24px;
+      padding: 90px 24px;
     }
 
     .contact p {
@@ -367,7 +335,7 @@
       font-size: 14px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1100px) {
       h1 {
         white-space: normal;
       }
@@ -383,7 +351,7 @@
       }
 
       .hero-text img.main-logo {
-        width: 190px;
+        width: 210px;
       }
 
       .hero-image {
@@ -392,11 +360,6 @@
 
       .facts {
         grid-template-columns: 1fr 1fr;
-      }
-
-      .funding-inner {
-        flex-direction: column;
-        text-align: center;
       }
     }
 
@@ -421,6 +384,7 @@
 
       .support {
         align-items: center;
+        gap: 12px;
       }
 
       .support img {
@@ -634,13 +598,6 @@
       </ul>
     </div>
 
-  </div>
-</section>
-
-<section class="funding">
-  <div class="funding-inner">
-    <p>Tento projekt byl realizován za finanční podpory Moravskoslezského kraje.</p>
-    <img src="logo-kraje.png" alt="Logo Moravskoslezského kraje">
   </div>
 </section>
 
