@@ -16,13 +16,7 @@
       --border: #e4e4dc;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -32,27 +26,26 @@
       line-height: 1.65;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
     header {
       min-height: 92vh;
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 64% 36%;
       background: var(--white);
     }
 
     .hero-text {
-      padding: 58px 52px 58px 70px;
+      padding: 54px 56px 54px 72px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    .hero-text img.main-logo {
-      width: 280px;
-      margin-bottom: 38px;
+    .main-logo {
+      width: 315px;
+      max-width: 100%;
+      margin-bottom: 34px;
     }
 
     .eyebrow {
@@ -61,26 +54,26 @@
       font-size: 13px;
       font-weight: 700;
       color: var(--green);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     h1 {
-      font-size: clamp(42px, 4.5vw, 68px);
+      font-size: clamp(38px, 3.9vw, 58px);
       line-height: 1.03;
       margin: 0;
-      letter-spacing: -2.5px;
+      letter-spacing: -2px;
       white-space: nowrap;
     }
 
     .claim {
       font-size: 23px;
       color: var(--green);
-      margin: 22px 0;
+      margin: 20px 0;
       font-weight: 700;
     }
 
     .hero-text p {
-      max-width: 520px;
+      max-width: 540px;
       font-size: 18px;
     }
 
@@ -114,20 +107,22 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      margin-top: 35px;
-      max-width: 620px;
+      margin-top: 34px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      max-width: 560px;
     }
 
     .support img {
-      height: 44px;
+      height: 48px;
       width: auto;
       object-fit: contain;
     }
 
     .support-line {
       width: 1px;
-      height: 42px;
-      background: #d8d8d0;
+      height: 44px;
+      background: #d6d6ce;
     }
 
     .support span {
@@ -135,7 +130,7 @@
       color: #555;
       line-height: 1.4;
       font-weight: 600;
-      max-width: 360px;
+      max-width: 330px;
     }
 
     .hero-image {
@@ -150,7 +145,7 @@
     section {
       max-width: 1120px;
       margin: auto;
-      padding: 82px 24px;
+      padding: 76px 24px;
     }
 
     .section-label {
@@ -159,20 +154,19 @@
       letter-spacing: 2px;
       font-size: 13px;
       font-weight: 800;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
     }
 
     h2 {
-      font-size: clamp(32px, 4vw, 50px);
+      font-size: clamp(30px, 3.6vw, 46px);
       line-height: 1.1;
-      margin: 0 0 26px;
-      letter-spacing: -1.5px;
+      margin: 0 0 24px;
+      letter-spacing: -1.3px;
     }
 
     h3 {
       margin-top: 0;
       font-size: 24px;
-      letter-spacing: -.4px;
     }
 
     .intro {
@@ -185,15 +179,15 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 16px;
-      margin-top: 42px;
+      margin-top: 38px;
     }
 
     .fact {
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 28px;
+      border-radius: 22px;
+      padding: 26px;
       background: var(--white);
-      box-shadow: 0 14px 36px rgba(0,0,0,0.035);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.03);
     }
 
     .fact strong {
@@ -225,33 +219,31 @@
 
     .equipment {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 16px;
-      margin-top: 34px;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+      margin-top: 30px;
     }
 
     .equipment div {
-      padding: 24px;
+      padding: 22px;
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: 22px;
+      border-radius: 20px;
       font-weight: 800;
       font-size: 17px;
-      min-height: 76px;
+      min-height: 74px;
       display: flex;
       align-items: center;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.03);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.025);
     }
 
-    .photo {
-      padding-bottom: 35px;
-    }
+    .photo { padding-bottom: 34px; }
 
     .photo-card {
-      border-radius: 30px;
+      border-radius: 28px;
       overflow: hidden;
       background: var(--cream);
-      box-shadow: 0 18px 48px rgba(0,0,0,0.07);
+      box-shadow: 0 14px 38px rgba(0,0,0,0.06);
     }
 
     .photo-card img {
@@ -281,25 +273,23 @@
       border: 0;
       border-radius: 28px;
       display: block;
-      box-shadow: 0 16px 42px rgba(0,0,0,0.07);
+      box-shadow: 0 14px 38px rgba(0,0,0,0.06);
     }
 
     .trips {
       display: grid;
-      gap: 20px;
+      gap: 18px;
     }
 
     .trip {
-      padding: 30px;
+      padding: 28px;
       background: var(--white);
       border: 1px solid var(--border);
-      border-radius: 26px;
-      box-shadow: 0 12px 34px rgba(0,0,0,0.035);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
     }
 
-    .trip p {
-      margin: 10px 0;
-    }
+    .trip p { margin: 10px 0; }
 
     .trip ul {
       margin: 12px 0 12px 20px;
@@ -316,16 +306,11 @@
       color: white;
       max-width: none;
       text-align: center;
-      padding: 90px 24px;
+      padding: 86px 24px;
     }
 
-    .contact p {
-      font-size: 18px;
-    }
-
-    .contact a {
-      color: white;
-    }
+    .contact p { font-size: 18px; }
+    .contact a { color: white; }
 
     footer {
       background: #000000;
@@ -335,10 +320,8 @@
       font-size: 14px;
     }
 
-    @media (max-width: 1100px) {
-      h1 {
-        white-space: normal;
-      }
+    @media (max-width: 1180px) {
+      h1 { white-space: normal; }
     }
 
     @media (max-width: 900px) {
@@ -350,8 +333,8 @@
         padding: 48px 26px;
       }
 
-      .hero-text img.main-logo {
-        width: 210px;
+      .main-logo {
+        width: 230px;
       }
 
       .hero-image {
@@ -379,16 +362,15 @@
       }
 
       section {
-        padding: 70px 20px;
+        padding: 68px 20px;
       }
 
       .support {
-        align-items: center;
         gap: 12px;
       }
 
       .support img {
-        height: 38px;
+        height: 40px;
       }
 
       .support span {
