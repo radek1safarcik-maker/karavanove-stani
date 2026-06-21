@@ -39,49 +39,20 @@
     header {
       min-height: 92vh;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 58% 42%;
       background: var(--white);
     }
 
     .hero-text {
-      padding: 70px;
+      padding: 60px 52px 60px 70px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-    .hero-top {
-      display: flex;
-      align-items: center;
-      gap: 34px;
-      margin-bottom: 46px;
-      max-width: 680px;
-    }
-
     .hero-text img.main-logo {
       width: 220px;
-      flex-shrink: 0;
-    }
-
-    .support {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      max-width: 390px;
-    }
-
-    .support img {
-      height: 48px;
-      width: auto;
-      object-fit: contain;
-      flex-shrink: 0;
-    }
-
-    .support span {
-      font-size: 13px;
-      color: #555;
-      line-height: 1.45;
-      font-weight: 600;
+      margin-bottom: 42px;
     }
 
     .eyebrow {
@@ -94,10 +65,11 @@
     }
 
     h1 {
-      font-size: clamp(44px, 6vw, 78px);
-      line-height: 1.02;
+      font-size: clamp(38px, 4.3vw, 56px);
+      line-height: 1.04;
       margin: 0;
-      letter-spacing: -2.5px;
+      letter-spacing: -2px;
+      white-space: nowrap;
     }
 
     .claim {
@@ -136,6 +108,34 @@
       background: transparent;
       color: var(--green);
       border: 1px solid var(--green);
+    }
+
+    .support {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 26px;
+      max-width: 620px;
+    }
+
+    .support img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .support-line {
+      width: 1px;
+      height: 46px;
+      background: var(--border);
+    }
+
+    .support span {
+      font-size: 13px;
+      color: #444;
+      line-height: 1.4;
+      font-weight: 600;
+      max-width: 360px;
     }
 
     .hero-image {
@@ -367,6 +367,12 @@
       font-size: 14px;
     }
 
+    @media (max-width: 1000px) {
+      h1 {
+        white-space: normal;
+      }
+    }
+
     @media (max-width: 900px) {
       header {
         grid-template-columns: 1fr;
@@ -376,19 +382,8 @@
         padding: 48px 26px;
       }
 
-      .hero-top {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 22px;
-        margin-bottom: 38px;
-      }
-
       .hero-text img.main-logo {
-        width: 200px;
-      }
-
-      .support {
-        max-width: 100%;
+        width: 190px;
       }
 
       .hero-image {
@@ -424,12 +419,16 @@
         padding: 70px 20px;
       }
 
-      .hero-text img.main-logo {
-        width: 185px;
+      .support {
+        align-items: center;
       }
 
       .support img {
-        height: 42px;
+        height: 38px;
+      }
+
+      .support span {
+        font-size: 12px;
       }
     }
   </style>
@@ -439,21 +438,13 @@
 
 <header>
   <div class="hero-text">
-
-    <div class="hero-top">
-      <img class="main-logo" src="logo.png" alt="Logo Stellplatz pána z Kravař">
-
-      <div class="support">
-        <img src="logo-kraje.png" alt="Logo Moravskoslezského kraje">
-        <span>Tento projekt byl realizován za finanční podpory Moravskoslezského kraje.</span>
-      </div>
-    </div>
+    <img class="main-logo" src="logo.png" alt="Logo Stellplatz pána z Kravař">
 
     <div class="eyebrow">Soukromé karavanové stání</div>
 
     <h1>Stellplatz pána z Kravař</h1>
 
-    <p class="claim">Dvě stání a maximum klidu.</p>
+    <p class="claim">Dvě stání. Maximum klidu.</p>
 
     <p>
       Klidné a bezpečné místo pro karavanisty v oploceném areálu
@@ -463,6 +454,12 @@
     <div class="hero-actions">
       <a class="button" href="tel:+420792313118">Rezervovat telefonicky</a>
       <a class="button secondary" href="https://maps.google.com/?q=49.925838,18.006463" target="_blank">Otevřít mapu</a>
+    </div>
+
+    <div class="support">
+      <img src="logo-kraje.png" alt="Logo Moravskoslezského kraje">
+      <div class="support-line"></div>
+      <span>Tento projekt byl realizován za finanční podpory Moravskoslezského kraje.</span>
     </div>
   </div>
 
