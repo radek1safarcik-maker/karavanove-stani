@@ -36,25 +36,6 @@
       color: inherit;
     }
 
-    .topbar {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 18px;
-      padding: 14px 24px;
-      background: var(--green-soft);
-      border-bottom: 1px solid var(--border);
-      font-size: 14px;
-      color: var(--dark);
-      text-align: center;
-    }
-
-    .topbar img {
-      height: 34px;
-      width: auto;
-      object-fit: contain;
-    }
-
     header {
       min-height: 92vh;
       display: grid;
@@ -221,7 +202,7 @@
     }
 
     .equipment div {
-      padding: 24px 24px;
+      padding: 24px;
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: 22px;
@@ -331,11 +312,11 @@
     }
 
     .funding img {
-      max-height: 80px;
-      max-width: 260px;
+      max-height: 90px;
+      max-width: 280px;
       object-fit: contain;
       background: white;
-      padding: 10px;
+      padding: 12px;
       border-radius: 12px;
     }
 
@@ -387,11 +368,6 @@
     }
 
     @media (max-width: 560px) {
-      .topbar {
-        flex-direction: column;
-        gap: 8px;
-      }
-
       .facts {
         grid-template-columns: 1fr;
       }
@@ -414,11 +390,6 @@
 </head>
 
 <body>
-
-<div class="topbar">
-  <img src="logo kraje.jpg" alt="Logo Moravskoslezského kraje">
-  <span>Tento projekt byl realizován za finanční podpory Moravskoslezského kraje.</span>
-</div>
 
 <header>
   <div class="hero-text">
@@ -618,7 +589,7 @@
 <section class="funding">
   <div class="funding-inner">
     <p>Tento projekt byl realizován za finanční podpory Moravskoslezského kraje.</p>
-    <img src="logo kraje.jpg" alt="Logo Moravskoslezského kraje">
+    <img src="logo-kraje.png" alt="Logo Moravskoslezského kraje">
   </div>
 </section>
 
