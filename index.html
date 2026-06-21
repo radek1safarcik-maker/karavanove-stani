@@ -52,7 +52,32 @@
 
     .hero-text img.main-logo {
       width: 175px;
-      margin-bottom: 42px;
+      margin-bottom: 26px;
+    }
+
+    .support {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      padding: 12px 16px;
+      background: #f5f7f5;
+      border: 1px solid #e4e4dc;
+      border-radius: 14px;
+      max-width: 560px;
+    }
+
+    .support img {
+      height: 46px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .support span {
+      font-size: 13px;
+      color: #555;
+      line-height: 1.4;
+      font-weight: 600;
     }
 
     .eyebrow {
@@ -211,13 +236,7 @@
       min-height: 76px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       box-shadow: 0 14px 35px rgba(0,0,0,0.035);
-    }
-
-    .equipment div span {
-      color: var(--green);
-      font-size: 20px;
     }
 
     .photo {
@@ -385,6 +404,14 @@
       section {
         padding: 70px 20px;
       }
+
+      .support {
+        align-items: flex-start;
+      }
+
+      .support img {
+        height: 40px;
+      }
     }
   </style>
 </head>
@@ -394,6 +421,11 @@
 <header>
   <div class="hero-text">
     <img class="main-logo" src="logo.png" alt="Logo Stellplatz pána z Kravař">
+
+    <div class="support">
+      <img src="logo-kraje.png" alt="Logo Moravskoslezského kraje">
+      <span>Tento projekt byl realizován za finanční podpory Moravskoslezského kraje.</span>
+    </div>
 
     <div class="eyebrow">Soukromé karavanové stání</div>
 
@@ -461,13 +493,13 @@
     <h2>Vybavení</h2>
 
     <div class="equipment">
-      <div>Elektřina <span>↗</span></div>
-      <div>Pitná voda <span>↗</span></div>
-      <div>Výlevka chemického WC <span>↗</span></div>
-      <div>Výpusť šedé vody <span>↗</span></div>
-      <div>Ohniště a gril <span>↗</span></div>
-      <div>Oplocený areál <span>↗</span></div>
-      <div>Pobyt se psem povolen <span>↗</span></div>
+      <div>🔌 Elektřina</div>
+      <div>💧 Pitná voda</div>
+      <div>🚻 Výlevka chemického WC</div>
+      <div>♻️ Výpusť šedé vody</div>
+      <div>🔥 Ohniště a gril</div>
+      <div>🔒 Oplocený areál</div>
+      <div>🐕 Pobyt se psem povolen</div>
     </div>
   </div>
 </section>
